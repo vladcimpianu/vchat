@@ -7,10 +7,16 @@ const Join = () => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      window.location.href = `/chat?name=${name}&room=${room}`;
+    }
+  };
+
   return (
     <div className="join-outer-container">
       <div className="join-inner-container">
-        <h1 className="heading">Join vChat</h1>
+        <h1 className="heading">join vChat</h1>
         <div>
           <input
             placeholder="Name"
@@ -19,6 +25,7 @@ const Join = () => {
             onChange={(event) => {
               setName(event.target.value);
             }}
+            onKeyDown={(e) => handleKeyDown(e)}
           />
         </div>
         <div>
@@ -27,6 +34,7 @@ const Join = () => {
             className="join-input mt-20"
             type="text"
             onChange={(event) => setRoom(event.target.value)}
+            onKeyDown={(e) => handleKeyDown(e)}
           />
         </div>
         <Link
