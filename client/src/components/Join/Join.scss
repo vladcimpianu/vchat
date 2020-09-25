@@ -1,17 +1,19 @@
+@import "../../theme/index.scss";
+
 .join-outer-container {
   display: flex;
   justify-content: center;
   text-align: center;
   height: 100vh;
   align-items: center;
-  background-color: #1a1a1a;
+  background-color: $background-gradient;
   .join-inner-container {
     width: 20%;
     .heading {
-      color: white;
+      color: $white;
       font-size: 2em;
       padding-bottom: 5px;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid $light-gray;
       &:hover {
         text-indent: 2px;
         font-size: 2.05em;
@@ -23,16 +25,20 @@
       padding: 15px 20px;
       width: 100%;
       outline: none;
+      color: $light-gray;
       &:hover,
       ::placeholder {
         text-indent: 2px;
+        color: $light-gray;
       }
     }
     .btn {
-      color: #fff !important;
+      color: $white !important;
+      font-weight: 600;
+      font-size: 1.1em;
       text-transform: uppercase;
       text-decoration: none;
-      background: #2979ff;
+      background: $btn-color;
       padding: 15px 20px;
       border-radius: 5px;
       display: inline-block;
@@ -43,8 +49,7 @@
         outline: 0;
       }
       &:hover {
-        background-color: #2979ee;
-        text-indent: 2px;
+        background-color: $btn-hover;
         padding: 16px;
       }
     }
