@@ -1,0 +1,56 @@
+@import "../../../theme/index.scss";
+
+.message-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 5%;
+  margin-top: $small;
+  .author-user {
+    display: flex;
+    align-items: center;
+    color: $dark-gray;
+  }
+  .message-box {
+    border-radius: $border-radius;
+    padding: $small $large;
+    color: $dark;
+    display: inline-block;
+    max-width: 80%;
+    background-color: $light-gray;
+    .message-text {
+      width: 100%;
+      letter-spacing: 0;
+      margin-left: 0;
+      float: left;
+      font-size: 1.1em;
+      word-wrap: break-word;
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+  .dark-background {
+    background-color: $blue;
+    .text-light {
+      color: $light;
+    }
+  }
+  .light-background {
+    background-color: $light;
+    .text-dark {
+      color: $dark;
+    }
+  }
+}
+.pl-10 {
+  padding-left: $medium;
+}
+.pr-10 {
+  padding-right: $medium;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
